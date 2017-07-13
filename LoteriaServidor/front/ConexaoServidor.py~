@@ -170,7 +170,7 @@ def realizarSorteio():
     if len(ganhaste) > 0:
         valor = valor/len(ganhaste)
         valor = str(valor)
-        print 'HOUVE ' + len(ganhaste) +' GANHADOR(ES)'
+        print 'HOUVE ' + str(len(ganhaste)) +' GANHADOR(ES)'
         i = 0
         while i < len(ganhaste):
             auxiliavendedor = banco.buscarPessoa(ganhaste[i].id_pessoa)

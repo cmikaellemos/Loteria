@@ -144,25 +144,24 @@ def desconectar(con, cliente):
 def realizarSorteio():
     lista = sorted(random.sample(range(0,99), 6))
     
-    """
     campo1 = lista[0]
     campo2 = lista[1]
     campo3 = lista[2]
     campo4 = lista[3]
     campo5 = lista[4]
     campo6 = lista[5]
-    """
+    
     banco = DAO()
 
     #CAMPOS PARA AMOSTRA DE VENCEDOR
-
+    """
     campo1 = 12
     campo2 = 12
     campo3 = 12
     campo4 = 12
     campo5 = 12
     campo6 = 12
-       
+    """
     valor = 100000
 
     ganhaste = banco.lerSorteio("SELECT id_aposta, campo1, campo2, campo3, campo4, campo5, campo6, id_pessoa FROM aposta", campo1, campo2, campo3, campo4, campo5, campo6)
@@ -178,7 +177,7 @@ def realizarSorteio():
             vencedor.enviar()
             i = i+1
 
-            '''banco.apagar('DELETE FROM aposta WHERE id_aposta >= 0')'''
+            banco.apagar('DELETE FROM aposta WHERE id_aposta >= 0')
     else:
         print 'NÃO HOUVE GANHADOR'
 
